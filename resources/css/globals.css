@@ -90,6 +90,7 @@ a {
   --button-background: #CC4465;
 
   --sidebar-item: #343F5A;
+  --label-item: #7981AD;
 
   --card-background: #191B27;
   --card-image-background: url('../img/card_background.png');
@@ -110,8 +111,36 @@ p {
   letter-spacing: -0.8px;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.f-center {
+  justify-content: center;
+}
+
+.gap-xl {
+  gap: 1.5rem;
+}
+
 .mgtop-ng {
   margin-top: -50px !important;
+}
+
+.mgtop-xl {
+  margin-top: 2rem !important;
+}
+.mgbottom-xl {
+  margin-bottom: 2rem;
+}
+
+.divider {
+  width: 80%;
+  height: 2px;
+  background: #292C3F;
+  display: block;
+  margin: 3rem auto 3rem auto;
 }
 
 .main-btn {
@@ -161,6 +190,11 @@ p {
 
 .full-btn:hover {
   filter: brightness(0.9);
+}
+
+.full-btn.xs {
+  padding: 25px;
+  font-size: 14px;
 }
 
 /* COLUMNs */
@@ -833,6 +867,22 @@ p {
   font-size: 17px;
 }
 
+#dashboard-content .sec-card .option {
+  color: var(--main-text);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+#dashboard-content .sec-card .option.active {
+  color: var(--main-color);
+}
+
+#dashboard-content .sec-card .option:hover {
+  filter: brightness(0.8);
+}
+
 #dashboard-content .sec-card h4 {
   color: var(--main-color);
   font-size: 30px;
@@ -901,13 +951,24 @@ p {
   display: block;
 }
 
-#dashboard-content .sec-card .form {
+#dashboard-content .sec-card .form,
+#spage .form {
   position: relative;
   margin-bottom: 1rem;
 }
 
-#dashboard-content .sec-card .form.top {
+#dashboard-content .sec-card .form.top,
+#spage .form.top {
   margin-top: 1rem;
+}
+
+#dashboard-content .sec-card .form .label,
+#spage .form .label {
+  color: var(--label-item);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 #dashboard-content .sec-card .form .textarea {
@@ -919,22 +980,88 @@ p {
   font-size: 14px;
   background: var(--main-background);
   color: var(--main-title);
+  font-weight: 500;
   border-radius: 5px;
   border: 0;
   display: block;
   outline: 0;
 }
 
-#dashboard-content .sec-card .form .input {
+#dashboard-content .sec-card .form .input,
+#spage .form .input {
   width: 100%;
   padding: 30px;
   background: var(--main-background);
   color: var(--main-title);
   font-size: 14px;
+  font-weight: 500;
   border-radius: 5px;
   border: 0;
   display: block;
   outline: 0;
+}
+
+#spage .form .input {
+  padding: 25px;
+}
+#spage .form .label {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#dashboard-content .sec-card .form .input::placeholder,
+#dashboard-content .sec-card .form .textarea::placeholder,
+#spage .form .input::placeholder {
+  color: #4C5273;
+}
+
+#dashboard-content .sec-card .table-wrap {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+#dashboard-content .sec-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#dashboard-content .sec-card td, th {
+  text-align: center;
+  padding: 15px !important;
+}
+
+#dashboard-content .sec-card th {
+  color: var(--main-title);
+}
+
+#dashboard-content .sec-card td {
+  color: #43496e;
+  font-weight: 500;
+}
+
+#dashboard-content .sec-card tr:first-child {
+  background: transparent;
+}
+#dashboard-content .sec-card tr {
+  background: #202232;
+}
+
+#dashboard-content .sec-card tr:nth-child(even) {
+  background: #14151F;
+}
+
+#dashboard-content .sec-card table .delete {
+  width: 20px;
+  height: auto;
+  fill: #43496e;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+#dashboard-content .sec-card table .delete:hover {
+  fill: var(--main-title);
 }
 
 #dashboard-content .sec-card .center {
@@ -1026,6 +1153,75 @@ p {
   color: var(--main-text);
   font-size: 15px;
   font-weight: 500;
+}
+
+/* SECONDARY SCREENS */
+
+#spage {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+}
+
+#spage .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#spage .content .card {
+  width: 650px;
+  padding: 50px 35px 35px 35px;
+  background: var(--card-background);
+  border-radius: 5px;
+}
+
+#spage .content .card .logo {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+#spage .content .card h3 {
+  color: #63698C;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#spage .content .card p {
+  color: var(--main-text);
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+#spage .content .card .agreelabel {
+  color: var(--main-title);
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+#spage .content .card .forgotpassword {
+  color: var(--main-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+#spage .content .card .forgotpassword:hover {
+  filter: brightness(0.8);
 }
 
 /* MEDIA QUERIES */

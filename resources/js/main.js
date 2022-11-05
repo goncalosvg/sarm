@@ -13,4 +13,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    /* CHANGE CONTENT */
+
+    /* # Download */
+
+    let customButton = document.querySelector("#custom-btn");
+    let randomButton = document.querySelector("#random-btn");
+
+    customButton.addEventListener("click", function() {
+        if(customButton.classList.contains("active")) return customButton.classList.remove("active")
+        randomButton.classList.remove("active")
+        customButton.classList.add("active")
+    });
+
+    randomButton.addEventListener("click", function() {
+        if(randomButton.classList.contains("active")) return randomButton.classList.remove("active")
+        customButton.classList.remove("active")
+        randomButton.classList.add("active")
+    });
+
 });
