@@ -20,16 +20,25 @@ document.addEventListener("DOMContentLoaded", function() {
     let customButton = document.querySelector("#custom-btn");
     let randomButton = document.querySelector("#random-btn");
 
-    customButton.addEventListener("click", function() {
+    customButton?.addEventListener("click", function() {
         if(customButton.classList.contains("active")) return customButton.classList.remove("active")
         randomButton.classList.remove("active")
         customButton.classList.add("active")
     });
 
-    randomButton.addEventListener("click", function() {
+    randomButton?.addEventListener("click", function() {
         if(randomButton.classList.contains("active")) return randomButton.classList.remove("active")
         customButton.classList.remove("active")
         randomButton.classList.add("active")
+    });
+
+    /* SHOW IP */
+
+    let ipInput = document.querySelector("#Fasthe-input");
+    let showIcon = document.querySelector("#Fasthe-show");
+
+    showIcon.addEventListener("click", function() {
+        ipInput.type = "text";
     });
 
 });

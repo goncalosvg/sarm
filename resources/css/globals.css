@@ -157,6 +157,16 @@ p {
   margin: 2rem auto 2rem auto;
 }
 
+.no-input {
+  width: 100px;
+  padding: 0 0;
+  background: transparent;
+  border: 0;
+  display: block;
+  margin: auto;
+  pointer-events: none;
+}
+
 .main-btn {
   background: var(--button-image-background);
   background-size: cover;
@@ -1079,6 +1089,16 @@ p {
   background: #14151F;
 }
 
+#dashboard-content .sec-card table .show {
+  width: 20px;
+  height: auto;
+  fill: #43496e;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
 #dashboard-content .sec-card table .option {
   width: 50px;
   height: 25px !important;
@@ -1120,6 +1140,9 @@ p {
 }
 
 #dashboard-content .sec-card table .delete:hover {
+  fill: var(--main-title);
+}
+#dashboard-content .sec-card table .show:hover {
   fill: var(--main-title);
 }
 #dashboard-content .sec-card table .ban:hover > circle {
