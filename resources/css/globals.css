@@ -120,6 +120,10 @@ p {
   align-items: center;
 }
 
+.flex.between {
+  justify-content: space-between;
+}
+
 .f-center {
   justify-content: center;
 }
@@ -1104,6 +1108,16 @@ p {
   height: 25px !important;
 }
 
+#dashboard-content .sec-card .deleteIcon {
+  width: 20px;
+  height: auto;
+  fill: #43496e;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
 #dashboard-content .sec-card table .delete {
   width: 20px;
   height: auto;
@@ -1140,6 +1154,9 @@ p {
 }
 
 #dashboard-content .sec-card table .delete:hover {
+  fill: var(--main-title);
+}
+#dashboard-content .sec-card .deleteIcon:hover {
   fill: var(--main-title);
 }
 #dashboard-content .sec-card table .show:hover {
