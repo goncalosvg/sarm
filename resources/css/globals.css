@@ -81,9 +81,13 @@ a {
   --main-background: #090B10;
   --secondary-background: #06070B;
 
+  --main-border: #1e222c;
+  --table-item-hover: rgba(25, 30, 44, 0.250);
+
   --main-color: #CC4465;
 
   --main-title: #ffffff;
+  --secondary-title: #6a75ab;
   --main-text: #38425B;
 
   --button-shadow: 3px 3px 30px rgba(152, 62, 91, 0.48);
@@ -123,6 +127,9 @@ p {
 .gap-xl {
   gap: 1.5rem;
 }
+.gap-xss {
+  gap: 5px;
+}
 
 .mgtop-ng {
   margin-top: -50px !important;
@@ -141,6 +148,10 @@ p {
   background: #292C3F;
   display: block;
   margin: 3rem auto 3rem auto;
+}
+
+.divider.xs {
+  margin: 2rem auto 2rem auto;
 }
 
 .main-btn {
@@ -206,7 +217,7 @@ p {
   margin-left: -12px;
 }
 
-.col-md-3,.col-md-4,.col-md-5,.col-md-7,.col-md-9 {
+.col-md-3,.col-md-4,.col-md-5,.col-md-7,.col-md-8,.col-md-9 {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -237,6 +248,11 @@ p {
 .col-md-7 {
   flex: 0 0 58.33333%;
   max-width: 58.33333%;
+}
+
+.col-md-8 {
+  flex :0 0 auto;
+  width: 66.66666667%
 }
 
 .col-md-9 {
@@ -856,6 +872,10 @@ p {
   margin-bottom: 1.5rem;
 }
 
+#dashboard-content .sec-card .title.col {
+  display: block;
+}
+
 #dashboard-content .sec-card .title h2 {
   color: var(--main-title);
   font-size: 23px;
@@ -865,6 +885,12 @@ p {
 
 #dashboard-content .sec-card .title h2.xxs {
   font-size: 17px;
+}
+
+#dashboard-content .sec-card .title p {
+  color: var(--main-text);
+  font-weight: 500;
+  margin-top: 5px;
 }
 
 #dashboard-content .sec-card .option {
@@ -1017,7 +1043,7 @@ p {
 
 #dashboard-content .sec-card .table-wrap {
   width: 100%;
-  overflow-x: scroll;
+  overflow: visible;
 }
 
 #dashboard-content .sec-card table {
@@ -1050,6 +1076,11 @@ p {
   background: #14151F;
 }
 
+#dashboard-content .sec-card table .option {
+  width: 50px;
+  height: 25px !important;
+}
+
 #dashboard-content .sec-card table .delete {
   width: 20px;
   height: auto;
@@ -1060,8 +1091,127 @@ p {
   transition: 0.3s all;
 }
 
+#dashboard-content .sec-card table .ban {
+  width: 20px;
+  height: auto;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#dashboard-content .sec-card table .more {
+  width: 20px;
+  height: auto;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#dashboard-content .sec-card table .more circle {
+  transition: 0.3s all;
+}
+
+#dashboard-content .sec-card table .ban rect,
+#dashboard-content .sec-card table .ban circle {
+  transition: 0.3s all;
+}
+
 #dashboard-content .sec-card table .delete:hover {
   fill: var(--main-title);
+}
+#dashboard-content .sec-card table .ban:hover > circle {
+  stroke: var(--main-title);
+}
+#dashboard-content .sec-card table .ban:hover > rect {
+  fill: var(--main-title);
+}
+
+#dashboard-content .sec-card table .more:hover > circle {
+  fill: var(--main-title);
+}
+
+#dashboard-content .sec-card table .dropdowntrigger {
+  position: relative;
+}
+
+#dashboard-content .sec-card table .dropdowncontent {
+  width: 200px;
+  background: var(--main-background);
+  border: 1px solid var(--main-border);
+  position: absolute;
+  right: -40px;
+  top: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.25s all;
+  z-index: 9999;
+}
+
+#dashboard-content .sec-card table .dropdowntrigger:hover > .dropdowncontent {
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown {
+  width: 100%;
+  height: 100%;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul {
+  padding: 0 0;
+  margin: 0 0;
+  display: block;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul li {
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  display: block;
+  transition: 0.3s all;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul li.disabled {
+  filter: brightness(0.5);
+  pointer-events: none;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul li:hover {
+  background: var(--table-item-hover);
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul li:last-child {
+  margin-bottom: 0;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul li h2 {
+  color: var(--main-title);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0;
+  text-align: left;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul li p {
+  color: var(--main-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+#dashboard-content .sec-card table .dropdowncontent .dropdown ul .divider {
+  width: 70%;
+  height: 1px;
+  background: var(--main-border);
+  display: block;
+  margin: 10px auto 10px auto;
 }
 
 #dashboard-content .sec-card .center {
@@ -1070,6 +1220,55 @@ p {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+#dashboard-content .sec-card .inline-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#dashboard-content .sec-card .inline-form h3 {
+  color: var(--secondary-title);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#dashboard-content .sec-card .inline-form .priceInput {
+  width: 70px;
+  background: transparent;
+  padding: 5px;
+  color: var(--main-title);
+  border: 0;
+  border-bottom: 1px solid #38425B;
+  outline: 0;
+  transform: 0.3s all;
+}
+
+#dashboard-content .sec-card .inline-form .priceInput::placeholder {
+  color: var(--main-text);
+}
+
+#dashboard-content .sec-card .inline-form .priceInput:focus {
+  border-bottom: 1px solid var(--main-title);
+}
+
+#dashboard-content .sec-card .violations {
+  padding: 0 0;
+  margin-bottom: 15px;
+}
+
+#dashboard-content .sec-card .violations li {
+  color: var(--secondary-title);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#dashboard-content .sec-card .violations li:last-child {
+  margin-bottom: 0;
 }
 
 #dashboard-content #product {
@@ -1293,11 +1492,21 @@ p {
   #dashboard-content .sec-card {
     padding: 25px;
   }
+  #dashboard-content .sec-card .table-wrap {
+    overflow: scroll;
+  }
+  #dashboard-content .sec-card .dropdowntrigger .dropdowncontent {
+    display: none;
+  }
+  #dashboard-content .sec-card .dropdowntrigger:hover > .dropdowncontent {
+    display: block;
+    right: 0;
+  }
   /* GLOBALS */
   .row {
     flex-direction: column;
   }
-  .col-md-3, .col-md-4 {
+  .col-md-3, .col-md-4, .col-md-8 {
     width: 100%;
     max-width: 100%;
     flex: 100%;
@@ -1368,6 +1577,16 @@ p {
   #dashboard-content .sec-card {
     padding: 25px;
   }
+  #dashboard-content .sec-card .table-wrap {
+    overflow: scroll;
+  }
+  #dashboard-content .sec-card .dropdowntrigger .dropdowncontent {
+    display: none;
+  }
+  #dashboard-content .sec-card .dropdowntrigger:hover > .dropdowncontent {
+    display: block;
+    right: 0;
+  }
   /* GLOBAL */
   .col-xs-12 {
     max-width: 100%;
@@ -1428,6 +1647,11 @@ p {
   .side-wrapper {
     width: calc(100% - 250px);
   }
+  .col-xl-12 {
+    width: 100%;
+    max-width: 100%;
+    flex: 100%;
+  }
   /* SIDEBAR */
   #sidebar {
     width: 250px;
@@ -1444,5 +1668,13 @@ p {
   /* HERO */
   #hero .mockup {
     width: 750px;
+  }
+}
+
+@media only screen and (min-width:1440px) and (max-width:1605px){
+  .col-xl-12 {
+    width: 100%;
+    max-width: 100%;
+    flex: 100%;
   }
 }
