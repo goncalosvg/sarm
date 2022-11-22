@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let navigationTrigger = document.querySelector("#mobile-trigger");
     let menu = document.getElementById("mobile-sidebar");
 
-    navigationTrigger.addEventListener("click", function() {
+    navigationTrigger?.addEventListener("click", function() {
         if(menu.classList.contains("opened")) {
             navigationTrigger.classList.remove("active");
             menu.classList.remove("opened")
@@ -46,8 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let getTerms = localStorage.getItem("terms");
     if(!getTerms) document.querySelector("#acceptTerms").classList.add("active");
 
-    console.log(getTerms)
-
 });
 
 var price = document.querySelector(".price");
@@ -57,7 +55,7 @@ var price = document.querySelector(".price");
 let monthlyButton = document.querySelector("#monthlyProduct");
 let lifetimeButton = document.querySelector("#lifetimeProduct");
 
-lifetimeButton.addEventListener("click", function(event) {
+lifetimeButton?.addEventListener("click", function(event) {
     if(!lifetimeButton.classList.contains("active")) {
         monthlyButton.classList.remove("active");
         lifetimeButton.classList.add("active");
@@ -68,7 +66,7 @@ lifetimeButton.addEventListener("click", function(event) {
     }
 });
 
-monthlyButton.addEventListener("click", function(event) {
+monthlyButton?.addEventListener("click", function(event) {
     if(!monthlyButton.classList.contains("active")) {
         lifetimeButton.classList.remove("active");
         monthlyButton.classList.add("active");
