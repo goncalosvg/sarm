@@ -695,7 +695,7 @@ p {
 #faq .faq-row .faq-collapse {
   width: 100%;
   height: auto;
-  padding: 30px;
+  padding: 20px 30px;
   background: var(--secondary-background);
 }
 
@@ -1919,6 +1919,10 @@ p {
     border-radius: 20px;
     margin-bottom: 20px;
   }
+  /* FAQ */
+  #faq .faq-row.active-collapse {
+    height: 500px;
+  }
   /* SIDEBAR */
   #sidebar {
     display: none;
@@ -2054,6 +2058,10 @@ p {
   #dashboard-content .sec-card .dropdowntrigger:hover > .dropdowncontent {
     display: block;
     right: 0;
+  }
+  /* FAQ */
+  #faq .faq-row.active-collapse {
+    height: 250px;
   }
   /* GLOBAL */
   .col-xs-12 {
