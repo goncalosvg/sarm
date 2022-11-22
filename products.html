@@ -110,6 +110,16 @@
     <main>
         <div class="side-wrapper">
             
+            <div id="acceptTerms">
+                <div class="title">
+                    <h2>To purchase SARM you need to accept the terms of service</h2>
+                    <div class="buttons">
+                        <button class="btn active" id="acceptTermsButton">Accept terms</button>
+                        <button class="btn">View terms</button>
+                    </div>
+                </div>
+            </div>
+
             <section id="dashboard-head">
                 <div class="wrapper">
                     <h1>Hello,<br> Gonçalo</h1>
@@ -122,38 +132,29 @@
 
                     <section id="product" class="mgtop-ng">
                         <div class="row center">
-                            <div class="col-md-4 col-xs-12 col-xl-5">
+                            <div class="col-md-7">
                                 <div class="card">
-                                    <h3>Monthly SARM <span class="time">(30 days)</span></h3>
+                                    <h3>Purchase SARM</h3>
+                                    <div class="buttons">
+                                        <button class="btn left active" id="monthlyProduct">Monthly</button>
+                                        <button class="btn right" id="lifetimeProduct">Lifetime</button>
+                                    </div>
                                     <div class="divider xs"></div>
-                                    <p>Get a taste of our autoclicking experience and eventually get addicted</p>
+                                    <p>Get access to the powerful undetected features of dream now with either a monthly or a lifetime subscription</p>
                                     <div class="divider xl"></div>
-                                    <ul class="list">
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                    </ul>
+                                    <label class="inputwrap active">
+                                        Choose a fixed amount of months
+                                        <input id="checkMonths" type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <input type="text" class="referal" placeholder="Referal code">
+                                    <div class="months">
+                                        <input type="range" min="0" max="10" value="0" class="slider" id="monthSelection">
+                                        <output><span id="monthOutput"></span></output>
+                                    </div>
                                     <div class="divider xs"></div>
-                                    <h4>$9.99<span class="per">/per month</span></h4>
-                                    <button class="main-btn wd xs">Start with the monthly version</button>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-xl-5">
-                                <div class="card">
-                                    <h3>Lifetime SARM <span class="time">(your life)</span></h3>
-                                    <div class="divider xs"></div>
-                                    <p>Get a taste of our autoclicking experience and eventually get addicted</p>
-                                    <div class="divider xl"></div>
-                                    <ul class="list">
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                        <li><img class="icon" src="resources/img/check.svg" alt=""> Feature goes here</li>
-                                    </ul>
-                                    <div class="divider xs"></div>
-                                    <h4>$99.99<span class="per">/per month</span></h4>
-                                    <button class="main-btn wd xs">Start/end with the lifetime version</button>
+                                    <h4 class="price">$9.99</h4>
+                                    <button class="main-btn wd xs">Get SARM</button>
                                 </div>
                             </div>
                         </div>
