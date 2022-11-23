@@ -294,7 +294,7 @@ p {
 
 /* EMAIL # CONFIRMATION */
 
-#email {
+#email-confirmation {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -302,21 +302,21 @@ p {
   padding: 5rem 0 5rem 0;
 }
 
-#email .logo {
+#email-confirmation .logo {
   width: 130px;
   height: auto;
   display: block;
   margin: 0 auto 3rem auto;
 }
 
-#email .card {
+#email-confirmation .card {
   width: 700px;
   padding: 30px;
   background: var(--card-background);
   border-radius: 5px;
 }
 
-#email .card h3 {
+#email-confirmation .card h3 {
   color: var(--main-title);
   font-size: 17px;
   font-weight: 600;
@@ -324,18 +324,18 @@ p {
   margin-bottom: 10px;
 }
 
-#email .card p {
+#email-confirmation .card p {
   color: var(--secondary-title);
   font-size: 16px;
   font-weight: 400;
 }
 
-#email .card p.small-txt {
+#email-confirmation .card p.small-txt {
   color: var(--main-text);
   font-size: 14px;
 }
 
-#email .card .reset {
+#email-confirmation .card .reset {
   padding: 15px 20px;
   background: var(--main-color);
   color: var(--main-title);
@@ -349,7 +349,7 @@ p {
   transition: 0.3s all;
 }
 
-#email .card .reset:hover {
+#email-confirmation .card .reset:hover {
   filter: brightness(0.8);
 }
 
@@ -1063,6 +1063,7 @@ p {
 }
 
 #sidebar .footer .discord {
+  width: 200px;
   padding: 20px 40px;
   background: var(--main-color);
   color: var(--main-title);

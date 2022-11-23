@@ -10,6 +10,8 @@ faqFirst.addEventListener("click", function() {
     } else {
         document.querySelector(".faq-row").classList.remove("active-collapse");
         faqFirst.classList.add("active-collapse");
+        faqSecond.classList.remove("active-collapse");
+        faqThird.classList.remove("active-collapse");
     }
 });
 faqSecond.addEventListener("click", function() {
@@ -18,6 +20,8 @@ faqSecond.addEventListener("click", function() {
     } else {
         document.querySelector(".faq-row").classList.remove("active-collapse");
         faqSecond.classList.add("active-collapse");
+        faqFirst.classList.remove("active-collapse");
+        faqThird.classList.remove("active-collapse");
     }
 });
 faqThird.addEventListener("click", function() {
@@ -26,5 +30,7 @@ faqThird.addEventListener("click", function() {
     } else {
         document.querySelector(".faq-row").classList.remove("active-collapse");
         faqThird.classList.add("active-collapse");
+        faqFirst.classList.remove("active-collapse");
+        faqSecond.classList.remove("active-collapse");
     }
 });
