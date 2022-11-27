@@ -176,15 +176,16 @@ p {
 }
 
 .main-btn {
-  background: var(--button-image-background);
-  background-size: cover;
+  background-color: transparent;
+  background-image: var(--button-image-background);
+  background-size: 100%;
   background-repeat: no-repeat;
   padding: 23px 0;
   color: var(--main-title);
   font-size: 16px;
   font-weight: 600;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 0;
   border: 0;
   outline: 0;
   transition: 0.3s all;
@@ -662,11 +663,6 @@ p {
   height: 67px;
   padding: 0 28px;
   overflow: hidden;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 
 #faq .faq-row .faq-header {
@@ -684,7 +680,7 @@ p {
 }
 
 #faq .faq-row.active-collapse {
-  height: 210px;
+  height: 100%;
 }
 
 #faq .faq-row.active-collapse .faq-header {
@@ -1920,10 +1916,6 @@ p {
     border-radius: 20px;
     margin-bottom: 20px;
   }
-  /* FAQ */
-  #faq .faq-row.active-collapse {
-    height: 500px;
-  }
   /* SIDEBAR */
   #sidebar {
     display: none;
@@ -2059,10 +2051,6 @@ p {
   #dashboard-content .sec-card .dropdowntrigger:hover > .dropdowncontent {
     display: block;
     right: 0;
-  }
-  /* FAQ */
-  #faq .faq-row.active-collapse {
-    height: 250px;
   }
   /* GLOBAL */
   .col-xs-12 {
